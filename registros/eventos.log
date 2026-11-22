@@ -1,0 +1,336 @@
+2026-11-21 21:32:59,894 - INFO - Cliente registrado: Jesus Castro
+2026-11-21 21:32:59,895 - INFO - Operacion 1 ejecutada correctamente.
+2026-11-21 21:32:59,895 - INFO - Finalizacion de la operacion 1.
+2026-11-21 21:32:59,895 - ERROR - Operacion 2: El nombre no es valido.
+2026-11-21 21:32:59,895 - INFO - Finalizacion de la operacion 2.
+2026-11-21 21:32:59,896 - INFO - Cliente registrado: Maria Rodriguez
+2026-11-21 21:32:59,896 - INFO - Operacion 3 ejecutada correctamente.
+2026-11-21 21:32:59,896 - INFO - Finalizacion de la operacion 3.
+2026-11-21 21:32:59,896 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 21:32:59,896 - INFO - Operacion 4 ejecutada correctamente.
+2026-11-21 21:32:59,897 - INFO - Finalizacion de la operacion 4.
+2026-11-21 21:32:59,897 - INFO - Servicio registrado: Computador portatil
+2026-11-21 21:32:59,897 - INFO - Operacion 5 ejecutada correctamente.
+2026-11-21 21:32:59,897 - INFO - Finalizacion de la operacion 5.
+2026-11-21 21:32:59,897 - INFO - Servicio registrado: Asesoria de software
+2026-11-21 21:32:59,898 - INFO - Operacion 6 ejecutada correctamente.
+2026-11-21 21:32:59,898 - INFO - Finalizacion de la operacion 6.
+2026-11-21 21:32:59,898 - ERROR - Operacion 7: El precio debe ser mayor que cero.
+2026-11-21 21:32:59,898 - INFO - Finalizacion de la operacion 7.
+2026-11-21 21:32:59,898 - INFO - Reserva creada: R001
+2026-11-21 21:32:59,898 - INFO - Operacion 8 ejecutada correctamente.
+2026-11-21 21:32:59,899 - INFO - Finalizacion de la operacion 8.
+2026-11-21 21:32:59,899 - INFO - Operacion 9 ejecutada correctamente.
+2026-11-21 21:32:59,899 - INFO - Finalizacion de la operacion 9.
+2026-11-21 21:32:59,899 - INFO - Reserva creada: R002
+2026-11-21 21:32:59,899 - ERROR - Operacion 10: El servicio Computador portatil no esta disponible.
+2026-11-21 21:32:59,899 - INFO - Finalizacion de la operacion 10.
+2026-11-21 21:32:59,900 - ERROR - Operacion 11: La duracion debe ser mayor que cero.
+2026-11-21 21:32:59,900 - INFO - Finalizacion de la operacion 11.
+2026-11-21 21:32:59,900 - INFO - Reserva creada: R004
+2026-11-21 21:32:59,900 - INFO - Operacion 12 ejecutada correctamente.
+2026-11-21 21:32:59,900 - INFO - Finalizacion de la operacion 12.
+2026-11-21 21:32:59,901 - INFO - Operacion 13 ejecutada correctamente.
+2026-11-21 21:32:59,901 - INFO - Finalizacion de la operacion 13.
+2026-11-21 21:32:59,902 - INFO - Operacion 14 ejecutada correctamente.
+2026-11-21 21:32:59,902 - INFO - Finalizacion de la operacion 14.
+2026-11-21 21:32:59,902 - INFO - Operacion 15 ejecutada correctamente.
+2026-11-21 21:32:59,903 - INFO - Finalizacion de la operacion 15.
+2026-11-21 21:32:59,903 - INFO - Ejecucion general del sistema finalizada.
+2026-11-21 21:32:59,903 - ERROR - Error inesperado en operacion 16
+Traceback (most recent call last):
+  File "c:\Users\Usuary\Desktop\software_FJ\main.py", line 58, in ejecutar_operacion
+    funcion()
+    ~~~~~~~^^
+  File "c:\Users\Usuary\Desktop\software_FJ\main.py", line 378, in operacion16
+    cliente1,
+    ^^^^^^^^
+NameError: name 'cliente1' is not defined. Did you mean: 'Cliente'?
+2026-11-21 21:32:59,906 - INFO - Finalizacion de la operacion 16.
+2026-11-21 21:35:28,688 - INFO - Cliente registrado: Jesus Castro
+2026-11-21 21:35:28,689 - INFO - Operacion 1 ejecutada correctamente.
+2026-11-21 21:35:28,689 - INFO - Finalizacion de la operacion 1.
+2026-11-21 21:35:28,690 - ERROR - Operacion 2: El nombre no es valido.
+2026-11-21 21:35:28,690 - INFO - Finalizacion de la operacion 2.
+2026-11-21 21:35:28,690 - INFO - Cliente registrado: Maria Rodriguez
+2026-11-21 21:35:28,690 - INFO - Operacion 3 ejecutada correctamente.
+2026-11-21 21:35:28,691 - INFO - Finalizacion de la operacion 3.
+2026-11-21 21:35:28,691 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 21:35:28,691 - INFO - Operacion 4 ejecutada correctamente.
+2026-11-21 21:35:28,691 - INFO - Finalizacion de la operacion 4.
+2026-11-21 21:35:28,691 - INFO - Servicio registrado: Computador portatil
+2026-11-21 21:35:28,691 - INFO - Operacion 5 ejecutada correctamente.
+2026-11-21 21:35:28,691 - INFO - Finalizacion de la operacion 5.
+2026-11-21 21:35:28,692 - INFO - Servicio registrado: Asesoria de software
+2026-11-21 21:35:28,692 - INFO - Operacion 6 ejecutada correctamente.
+2026-11-21 21:35:28,692 - INFO - Finalizacion de la operacion 6.
+2026-11-21 21:35:28,692 - ERROR - Operacion 7: El precio debe ser mayor que cero.
+2026-11-21 21:35:28,692 - INFO - Finalizacion de la operacion 7.
+2026-11-21 21:35:28,693 - INFO - Reserva creada: R001
+2026-11-21 21:35:28,693 - INFO - Operacion 8 ejecutada correctamente.
+2026-11-21 21:35:28,693 - INFO - Finalizacion de la operacion 8.
+2026-11-21 21:35:28,693 - INFO - Operacion 9 ejecutada correctamente.
+2026-11-21 21:35:28,693 - INFO - Finalizacion de la operacion 9.
+2026-11-21 21:35:28,694 - INFO - Reserva creada: R002
+2026-11-21 21:35:28,694 - ERROR - Operacion 10: El servicio Computador portatil no esta disponible.
+2026-11-21 21:35:28,694 - INFO - Finalizacion de la operacion 10.
+2026-11-21 21:35:28,694 - ERROR - Operacion 11: La duracion debe ser mayor que cero.
+2026-11-21 21:35:28,694 - INFO - Finalizacion de la operacion 11.
+2026-11-21 21:35:28,695 - INFO - Reserva creada: R004
+2026-11-21 21:35:28,695 - INFO - Operacion 12 ejecutada correctamente.
+2026-11-21 21:35:28,695 - INFO - Finalizacion de la operacion 12.
+2026-11-21 21:35:28,695 - INFO - Operacion 13 ejecutada correctamente.
+2026-11-21 21:35:28,696 - INFO - Finalizacion de la operacion 13.
+2026-11-21 21:35:28,696 - INFO - Operacion 14 ejecutada correctamente.
+2026-11-21 21:35:28,696 - INFO - Finalizacion de la operacion 14.
+2026-11-21 21:35:28,697 - INFO - Operacion 15 ejecutada correctamente.
+2026-11-21 21:35:28,697 - INFO - Finalizacion de la operacion 15.
+2026-11-21 21:35:28,697 - ERROR - Operacion 16: No fue posible procesar la reserva.
+2026-11-21 21:35:28,698 - INFO - Finalizacion de la operacion 16.
+2026-11-21 21:35:28,698 - INFO - Ejecucion general del sistema finalizada.
+2026-11-21 21:45:57,704 - INFO - Cliente registrado: Jesus Castro
+2026-11-21 21:45:57,704 - INFO - Operacion 1 ejecutada correctamente.
+2026-11-21 21:45:57,704 - INFO - Finalizacion de la operacion 1.
+2026-11-21 21:45:57,705 - ERROR - Operacion 2: El nombre no es valido.
+2026-11-21 21:45:57,705 - INFO - Finalizacion de la operacion 2.
+2026-11-21 21:45:57,706 - INFO - Cliente registrado: Maria Rodriguez
+2026-11-21 21:45:57,706 - INFO - Operacion 3 ejecutada correctamente.
+2026-11-21 21:45:57,706 - INFO - Finalizacion de la operacion 3.
+2026-11-21 21:45:57,707 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 21:45:57,707 - INFO - Operacion 4 ejecutada correctamente.
+2026-11-21 21:45:57,707 - INFO - Finalizacion de la operacion 4.
+2026-11-21 21:45:57,707 - INFO - Servicio registrado: Computador portatil
+2026-11-21 21:45:57,707 - INFO - Operacion 5 ejecutada correctamente.
+2026-11-21 21:45:57,707 - INFO - Finalizacion de la operacion 5.
+2026-11-21 21:45:57,708 - INFO - Servicio registrado: Asesoria de software
+2026-11-21 21:45:57,708 - INFO - Operacion 6 ejecutada correctamente.
+2026-11-21 21:45:57,708 - INFO - Finalizacion de la operacion 6.
+2026-11-21 21:45:57,708 - ERROR - Operacion 7: El precio debe ser mayor que cero.
+2026-11-21 21:45:57,709 - INFO - Finalizacion de la operacion 7.
+2026-11-21 21:45:57,709 - INFO - Reserva creada: R001
+2026-11-21 21:45:57,709 - INFO - Operacion 8 ejecutada correctamente.
+2026-11-21 21:45:57,709 - INFO - Finalizacion de la operacion 8.
+2026-11-21 21:45:57,710 - INFO - Operacion 9 ejecutada correctamente.
+2026-11-21 21:45:57,710 - INFO - Finalizacion de la operacion 9.
+2026-11-21 21:45:57,710 - INFO - Reserva creada: R002
+2026-11-21 21:45:57,710 - ERROR - Operacion 10: El servicio Computador portatil no esta disponible.
+2026-11-21 21:45:57,710 - INFO - Finalizacion de la operacion 10.
+2026-11-21 21:45:57,711 - ERROR - Operacion 11: La duracion debe ser mayor que cero.
+2026-11-21 21:45:57,711 - INFO - Finalizacion de la operacion 11.
+2026-11-21 21:45:57,711 - INFO - Reserva creada: R004
+2026-11-21 21:45:57,711 - INFO - Operacion 12 ejecutada correctamente.
+2026-11-21 21:45:57,711 - INFO - Finalizacion de la operacion 12.
+2026-11-21 21:45:57,712 - INFO - Operacion 13 ejecutada correctamente.
+2026-11-21 21:45:57,712 - INFO - Finalizacion de la operacion 13.
+2026-11-21 21:45:57,713 - INFO - Operacion 14 ejecutada correctamente.
+2026-11-21 21:45:57,713 - INFO - Finalizacion de la operacion 14.
+2026-11-21 21:45:57,714 - INFO - Operacion 15 ejecutada correctamente.
+2026-11-21 21:45:57,714 - INFO - Finalizacion de la operacion 15.
+2026-11-21 21:45:57,714 - ERROR - Operacion 16: No fue posible procesar la reserva.
+2026-11-21 21:45:57,714 - INFO - Finalizacion de la operacion 16.
+2026-11-21 21:45:57,715 - INFO - Ejecucion general del sistema finalizada.
+2026-11-21 21:51:33,368 - INFO - Cliente registrado: Jesus Castro
+2026-11-21 21:51:33,369 - INFO - Operacion 1 ejecutada correctamente.
+2026-11-21 21:51:33,369 - INFO - Finalizacion de la operacion 1.
+2026-11-21 21:51:33,370 - ERROR - Operacion 2: El nombre no es valido.
+2026-11-21 21:51:33,370 - INFO - Finalizacion de la operacion 2.
+2026-11-21 21:51:33,370 - INFO - Cliente registrado: Maria Rodriguez
+2026-11-21 21:51:33,370 - INFO - Operacion 3 ejecutada correctamente.
+2026-11-21 21:51:33,370 - INFO - Finalizacion de la operacion 3.
+2026-11-21 21:51:33,371 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 21:51:33,371 - INFO - Operacion 4 ejecutada correctamente.
+2026-11-21 21:51:33,371 - INFO - Finalizacion de la operacion 4.
+2026-11-21 21:51:33,371 - INFO - Servicio registrado: Computador portatil
+2026-11-21 21:51:33,371 - INFO - Operacion 5 ejecutada correctamente.
+2026-11-21 21:51:33,372 - INFO - Finalizacion de la operacion 5.
+2026-11-21 21:51:33,372 - INFO - Servicio registrado: Asesoria de software
+2026-11-21 21:51:33,372 - INFO - Operacion 6 ejecutada correctamente.
+2026-11-21 21:51:33,372 - INFO - Finalizacion de la operacion 6.
+2026-11-21 21:51:33,372 - ERROR - Operacion 7: El precio debe ser mayor que cero.
+2026-11-21 21:51:33,373 - INFO - Finalizacion de la operacion 7.
+2026-11-21 21:51:33,373 - INFO - Reserva creada: R001
+2026-11-21 21:51:33,373 - INFO - Operacion 8 ejecutada correctamente.
+2026-11-21 21:51:33,373 - INFO - Finalizacion de la operacion 8.
+2026-11-21 21:51:33,374 - INFO - Operacion 9 ejecutada correctamente.
+2026-11-21 21:51:33,375 - INFO - Finalizacion de la operacion 9.
+2026-11-21 21:51:33,375 - INFO - Reserva creada: R002
+2026-11-21 21:51:33,375 - ERROR - Operacion 10: El servicio Computador portatil no esta disponible.
+2026-11-21 21:51:33,375 - INFO - Finalizacion de la operacion 10.
+2026-11-21 21:51:33,376 - ERROR - Operacion 11: La duracion debe ser mayor que cero.
+2026-11-21 21:51:33,376 - INFO - Finalizacion de la operacion 11.
+2026-11-21 21:51:33,376 - INFO - Reserva creada: R004
+2026-11-21 21:51:33,377 - INFO - Operacion 12 ejecutada correctamente.
+2026-11-21 21:51:33,377 - INFO - Finalizacion de la operacion 12.
+2026-11-21 21:51:33,377 - INFO - Operacion 13 ejecutada correctamente.
+2026-11-21 21:51:33,378 - INFO - Finalizacion de la operacion 13.
+2026-11-21 21:51:33,379 - INFO - Operacion 14 ejecutada correctamente.
+2026-11-21 21:51:33,379 - INFO - Finalizacion de la operacion 14.
+2026-11-21 21:51:33,379 - INFO - Operacion 15 ejecutada correctamente.
+2026-11-21 21:51:33,380 - INFO - Finalizacion de la operacion 15.
+2026-11-21 21:51:33,380 - ERROR - Operacion 16: No fue posible procesar la reserva.
+2026-11-21 21:51:33,380 - INFO - Finalizacion de la operacion 16.
+2026-11-21 21:51:33,381 - INFO - Ejecucion general del sistema finalizada.
+2026-11-21 21:56:50,931 - INFO - Cliente registrado: Jesus Castro
+2026-11-21 21:56:50,931 - INFO - Operacion 1 ejecutada correctamente.
+2026-11-21 21:56:50,931 - INFO - Finalizacion de la operacion 1.
+2026-11-21 21:56:50,932 - ERROR - Operacion 2: El nombre no es valido.
+2026-11-21 21:56:50,932 - INFO - Finalizacion de la operacion 2.
+2026-11-21 21:56:50,932 - INFO - Cliente registrado: Maria Rodriguez
+2026-11-21 21:56:50,933 - INFO - Operacion 3 ejecutada correctamente.
+2026-11-21 21:56:50,933 - INFO - Finalizacion de la operacion 3.
+2026-11-21 21:56:50,933 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 21:56:50,933 - INFO - Operacion 4 ejecutada correctamente.
+2026-11-21 21:56:50,933 - INFO - Finalizacion de la operacion 4.
+2026-11-21 21:56:50,934 - INFO - Servicio registrado: Computador portatil
+2026-11-21 21:56:50,934 - INFO - Operacion 5 ejecutada correctamente.
+2026-11-21 21:56:50,934 - INFO - Finalizacion de la operacion 5.
+2026-11-21 21:56:50,934 - INFO - Servicio registrado: Asesoria de software
+2026-11-21 21:56:50,934 - INFO - Operacion 6 ejecutada correctamente.
+2026-11-21 21:56:50,934 - INFO - Finalizacion de la operacion 6.
+2026-11-21 21:56:50,934 - ERROR - Operacion 7: El precio debe ser mayor que cero.
+2026-11-21 21:56:50,934 - INFO - Finalizacion de la operacion 7.
+2026-11-21 21:56:50,935 - INFO - Reserva creada: R001
+2026-11-21 21:56:50,935 - INFO - Operacion 8 ejecutada correctamente.
+2026-11-21 21:56:50,935 - INFO - Finalizacion de la operacion 8.
+2026-11-21 21:56:50,935 - INFO - Operacion 9 ejecutada correctamente.
+2026-11-21 21:56:50,936 - INFO - Finalizacion de la operacion 9.
+2026-11-21 21:56:50,936 - INFO - Reserva creada: R002
+2026-11-21 21:56:50,936 - ERROR - Operacion 10: El servicio Computador portatil no esta disponible.
+2026-11-21 21:56:50,936 - INFO - Finalizacion de la operacion 10.
+2026-11-21 21:56:50,936 - ERROR - Operacion 11: La duracion debe ser mayor que cero.
+2026-11-21 21:56:50,936 - INFO - Finalizacion de la operacion 11.
+2026-11-21 21:56:50,937 - INFO - Reserva creada: R004
+2026-11-21 21:56:50,937 - INFO - Operacion 12 ejecutada correctamente.
+2026-11-21 21:56:50,937 - INFO - Finalizacion de la operacion 12.
+2026-11-21 21:56:50,937 - INFO - Operacion 13 ejecutada correctamente.
+2026-11-21 21:56:50,938 - INFO - Finalizacion de la operacion 13.
+2026-11-21 21:56:50,938 - INFO - Operacion 14 ejecutada correctamente.
+2026-11-21 21:56:50,938 - INFO - Finalizacion de la operacion 14.
+2026-11-21 21:56:50,939 - INFO - Operacion 15 ejecutada correctamente.
+2026-11-21 21:56:50,939 - INFO - Finalizacion de la operacion 15.
+2026-11-21 21:56:50,951 - ERROR - Operacion 16: Error encadenado
+Traceback (most recent call last):
+  File "c:\Users\Usuary\Desktop\software_FJ\reservas.py", line 77, in procesar
+    self.__costo = self.__servicio.calcular_costo(
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.__duracion,
+        ^^^^^^^^^^^^^^^^
+        impuesto,
+        ^^^^^^^^^
+        descuento
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 126, in calcular_costo
+    self.validar_calculo(duracion, impuesto, descuento)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 119, in validar_calculo
+    super().validar_calculo(duracion, impuesto, descuento)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 67, in validar_calculo
+    self.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 61, in validar_disponibilidad
+    raise ServicioNoDisponibleError(
+        f"El servicio {self.__nombre} no esta disponible."
+    )
+excepciones.ServicioNoDisponibleError: El servicio Sala de reuniones no esta disponible.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Usuary\Desktop\software_FJ\main.py", line 79, in ejecutar_operacion
+    funcion()
+    ~~~~~~~^^
+  File "c:\Users\Usuary\Desktop\software_FJ\main.py", line 412, in operacion16
+    reserva4.procesar()
+    ~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Usuary\Desktop\software_FJ\reservas.py", line 90, in procesar
+    raise ReservaInvalidaError(
+        "No fue posible procesar la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible procesar la reserva.
+2026-11-21 21:56:50,953 - INFO - Finalizacion de la operacion 16.
+2026-11-21 21:56:50,954 - INFO - Ejecucion general del sistema finalizada.
+2026-11-21 22:50:40,776 - INFO - Cliente registrado: Jesus Castro
+2026-11-21 22:50:40,777 - INFO - Operacion 1 ejecutada correctamente.
+2026-11-21 22:50:40,777 - INFO - Finalizacion de la operacion 1.
+2026-11-21 22:50:40,777 - ERROR - Operacion 2: El nombre no es valido.
+2026-11-21 22:50:40,778 - INFO - Finalizacion de la operacion 2.
+2026-11-21 22:50:40,778 - INFO - Cliente registrado: Maria Rodriguez
+2026-11-21 22:50:40,778 - INFO - Operacion 3 ejecutada correctamente.
+2026-11-21 22:50:40,778 - INFO - Finalizacion de la operacion 3.
+2026-11-21 22:50:40,778 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 22:50:40,778 - INFO - Operacion 4 ejecutada correctamente.
+2026-11-21 22:50:40,779 - INFO - Finalizacion de la operacion 4.
+2026-11-21 22:50:40,779 - INFO - Servicio registrado: Computador portatil
+2026-11-21 22:50:40,779 - INFO - Operacion 5 ejecutada correctamente.
+2026-11-21 22:50:40,779 - INFO - Finalizacion de la operacion 5.
+2026-11-21 22:50:40,779 - INFO - Servicio registrado: Asesoria de software
+2026-11-21 22:50:40,779 - INFO - Operacion 6 ejecutada correctamente.
+2026-11-21 22:50:40,779 - INFO - Finalizacion de la operacion 6.
+2026-11-21 22:50:40,780 - ERROR - Operacion 7: El precio debe ser mayor que cero.
+2026-11-21 22:50:40,780 - INFO - Finalizacion de la operacion 7.
+2026-11-21 22:50:40,780 - INFO - Reserva creada: R001
+2026-11-21 22:50:40,780 - INFO - Operacion 8 ejecutada correctamente.
+2026-11-21 22:50:40,780 - INFO - Finalizacion de la operacion 8.
+2026-11-21 22:50:40,781 - INFO - Operacion 9 ejecutada correctamente.
+2026-11-21 22:50:40,781 - INFO - Finalizacion de la operacion 9.
+2026-11-21 22:50:40,781 - INFO - Reserva creada: R002
+2026-11-21 22:50:40,781 - ERROR - Operacion 10: El servicio Computador portatil no esta disponible.
+2026-11-21 22:50:40,781 - INFO - Finalizacion de la operacion 10.
+2026-11-21 22:50:40,781 - ERROR - Operacion 11: La duracion debe ser mayor que cero.
+2026-11-21 22:50:40,782 - INFO - Finalizacion de la operacion 11.
+2026-11-21 22:50:40,782 - INFO - Reserva creada: R004
+2026-11-21 22:50:40,782 - INFO - Operacion 12 ejecutada correctamente.
+2026-11-21 22:50:40,782 - INFO - Finalizacion de la operacion 12.
+2026-11-21 22:50:40,783 - INFO - Operacion 13 ejecutada correctamente.
+2026-11-21 22:50:40,783 - INFO - Finalizacion de la operacion 13.
+2026-11-21 22:50:40,783 - INFO - Operacion 14 ejecutada correctamente.
+2026-11-21 22:50:40,784 - INFO - Finalizacion de la operacion 14.
+2026-11-21 22:50:40,784 - INFO - Operacion 15 ejecutada correctamente.
+2026-11-21 22:50:40,785 - INFO - Finalizacion de la operacion 15.
+2026-11-21 22:50:40,785 - ERROR - Operacion 16: Error encadenado
+Traceback (most recent call last):
+  File "c:\Users\Usuary\Desktop\software_FJ\reservas.py", line 77, in procesar
+    self.__costo = self.__servicio.calcular_costo(
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.__duracion,
+        ^^^^^^^^^^^^^^^^
+        impuesto,
+        ^^^^^^^^^
+        descuento
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 126, in calcular_costo
+    self.validar_calculo(duracion, impuesto, descuento)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 119, in validar_calculo
+    super().validar_calculo(duracion, impuesto, descuento)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 67, in validar_calculo
+    self.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Usuary\Desktop\software_FJ\servicios.py", line 61, in validar_disponibilidad
+    raise ServicioNoDisponibleError(
+        f"El servicio {self.__nombre} no esta disponible."
+    )
+excepciones.ServicioNoDisponibleError: El servicio Sala de reuniones no esta disponible.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Usuary\Desktop\software_FJ\main.py", line 79, in ejecutar_operacion
+    funcion()
+    ~~~~~~~^^
+  File "c:\Users\Usuary\Desktop\software_FJ\main.py", line 412, in operacion16
+    reserva4.procesar()
+    ~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Usuary\Desktop\software_FJ\reservas.py", line 90, in procesar
+    raise ReservaInvalidaError(
+        "No fue posible procesar la reserva."
+    ) from error
+excepciones.ReservaInvalidaError: No fue posible procesar la reserva.
+2026-11-21 22:50:40,788 - INFO - Finalizacion de la operacion 16.
+2026-11-21 22:50:40,788 - INFO - Ejecucion general del sistema finalizada.
