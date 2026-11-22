@@ -334,3 +334,45 @@ Traceback (most recent call last):
 excepciones.ReservaInvalidaError: No fue posible procesar la reserva.
 2026-11-21 22:50:40,788 - INFO - Finalizacion de la operacion 16.
 2026-11-21 22:50:40,788 - INFO - Ejecucion general del sistema finalizada.
+2026-11-21 23:12:10,278 - INFO - Cliente registrado: Jesus Castro
+2026-11-21 23:12:10,278 - INFO - Operacion 1 ejecutada correctamente.
+2026-11-21 23:12:10,278 - INFO - Finalizacion de la operacion 1.
+2026-11-21 23:12:10,279 - ERROR - Operacion 2: El nombre no es valido.
+2026-11-21 23:12:10,279 - INFO - Finalizacion de la operacion 2.
+2026-11-21 23:12:10,279 - INFO - Cliente registrado: Maria Rodriguez
+2026-11-21 23:12:10,279 - INFO - Operacion 3 ejecutada correctamente.
+2026-11-21 23:12:10,279 - INFO - Finalizacion de la operacion 3.
+2026-11-21 23:12:10,280 - INFO - Servicio registrado: Sala de reuniones
+2026-11-21 23:12:10,280 - INFO - Operacion 4 ejecutada correctamente.
+2026-11-21 23:12:10,280 - INFO - Finalizacion de la operacion 4.
+2026-11-21 23:12:10,280 - INFO - Servicio registrado: Computador portatil
+2026-11-21 23:12:10,280 - INFO - Operacion 5 ejecutada correctamente.
+2026-11-21 23:12:10,280 - INFO - Finalizacion de la operacion 5.
+2026-11-21 23:12:10,281 - INFO - Servicio registrado: Asesoria de software
+2026-11-21 23:12:10,281 - INFO - Operacion 6 ejecutada correctamente.
+2026-11-21 23:12:10,281 - INFO - Finalizacion de la operacion 6.
+2026-11-21 23:12:10,281 - ERROR - Operacion 7: El precio debe ser mayor que cero.
+2026-11-21 23:12:10,281 - INFO - Finalizacion de la operacion 7.
+2026-11-21 23:12:10,282 - INFO - Reserva creada: R001
+2026-11-21 23:12:10,282 - INFO - Operacion 8 ejecutada correctamente.
+2026-11-21 23:12:10,282 - INFO - Finalizacion de la operacion 8.
+2026-11-21 23:12:10,283 - INFO - Operacion 9 ejecutada correctamente.
+2026-11-21 23:12:10,283 - INFO - Finalizacion de la operacion 9.
+2026-11-21 23:12:10,283 - INFO - Reserva creada: R002
+2026-11-21 23:12:10,283 - ERROR - Operacion 10: El servicio Computador portatil no esta disponible.
+2026-11-21 23:12:10,284 - INFO - Finalizacion de la operacion 10.
+2026-11-21 23:12:10,284 - ERROR - Operacion 11: La duracion debe ser mayor que cero.
+2026-11-21 23:12:10,284 - INFO - Finalizacion de la operacion 11.
+2026-11-21 23:12:10,285 - INFO - Reserva creada: R004
+2026-11-21 23:12:10,285 - INFO - Operacion 12 ejecutada correctamente.
+2026-11-21 23:12:10,285 - INFO - Finalizacion de la operacion 12.
+2026-11-21 23:12:10,286 - INFO - Operacion 13 ejecutada correctamente.
+2026-11-21 23:12:10,286 - INFO - Finalizacion de la operacion 13.
+2026-11-21 23:12:10,286 - INFO - Operacion 14 ejecutada correctamente.
+2026-11-21 23:12:10,286 - INFO - Finalizacion de la operacion 14.
+2026-11-21 23:12:10,287 - INFO - Operacion 15 ejecutada correctamente.
+2026-11-21 23:12:10,287 - INFO - Finalizacion de la operacion 15.
+2026-11-21 23:12:10,287 - ERROR - Operacion 16: No fue posible procesar la reserva.
+2026-11-21 23:12:10,288 - ERROR - Causa original de operacion 16: El servicio Sala de reuniones no esta disponible.
+2026-11-21 23:12:10,288 - INFO - Finalizacion de la operacion 16.
+2026-11-21 23:12:10,288 - INFO - Ejecucion general del sistema finalizada.

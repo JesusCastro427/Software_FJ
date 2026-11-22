@@ -1,22 +1,21 @@
 
-# Importar las clases necesarias para el funcionamiento del sistema
+# Importamos la clase encargada de administrar los clientes.
 from clientes import Cliente
+
+# Importamos las clases de los diferentes servicios.
 from servicios import (
     ReservaSala,
     AlquilerEquipos,
     AsesoriaEspecializada
 )
+
+# Importamos la clase que administra las reservas.
 from reservas import Reserva
 
-# Importar las excepciones personalizadas
-from excepciones import (
-    SoftwareFJError,
-    ClienteInvalidoError,
-    ReservaInvalidaError,
-    ServicioNoDisponibleError
-)
+# Importamos las excepciones generales del sistema.
+from excepciones import SoftwareFJError
 
-# Importar las funciones para registrar eventos y errores
+# Importamos las funciones para registrar eventos y errores.
 from logs import (
     registrar_evento,
     registrar_error,
@@ -24,112 +23,122 @@ from logs import (
 )
 
 
-# Clase principal para administrar clientes, servicios y reservas
+# Clase principal que administra la informacion del sistema.
 class SistemaGestion:
 
+    # Inicializamos las listas donde se guardan los registros.
     def __init__(self):
-        # Crear listas privadas para almacenar la informacion
         self.__clientes = []
         self.__servicios = []
         self.__reservas = []
 
-    # Registrar un nuevo cliente
+    # Metodo para registrar clientes.
     def registrar_cliente(self, cliente):
         self.__clientes.append(cliente)
         registrar_evento(f"Cliente registrado: {cliente.nombre}")
 
-    # Registrar un nuevo servicio
+    # Metodo para registrar servicios.
     def registrar_servicio(self, servicio):
         self.__servicios.append(servicio)
         registrar_evento(f"Servicio registrado: {servicio.nombre}")
 
-    # Registrar una nueva reserva
+    # Metodo para registrar reservas.
     def crear_reserva(self, reserva):
         self.__reservas.append(reserva)
         registrar_evento(f"Reserva creada: {reserva.identificador}")
 
-    # Mostrar todos los clientes registrados
+    # Metodo para mostrar todos los clientes registrados.
     def mostrar_clientes(self):
+
         for cliente in self.__clientes:
             print(cliente.mostrar_informacion())
             print("-" * 40)
 
-    # Mostrar todos los servicios disponibles
+    # Metodo para mostrar los servicios registrados.
     def mostrar_servicios(self):
+
         for servicio in self.__servicios:
             print(servicio.mostrar_informacion())
             print(servicio.describir_servicio())
             print("-" * 40)
 
-    # Mostrar todas las reservas registradas
+    # Metodo para mostrar las reservas registradas.
     def mostrar_reservas(self):
+
         for reserva in self.__reservas:
             print(reserva.mostrar_informacion())
             print("-" * 40)
 
 
-# Funcion para ejecutar operaciones y controlar posibles errores
+# Funcion general para ejecutar operaciones con control de excepciones.
 def ejecutar_operacion(numero, descripcion, funcion):
 
     print(f"\n========== OPERACION {numero} ==========")
     print(descripcion)
 
     try:
-        # Ejecutar la operacion correspondiente
+        # Ejecutamos la funcion correspondiente a cada operacion.
         funcion()
 
-    # Capturar las excepciones personalizadas del sistema
     except SoftwareFJError as error:
+
+        # Mostramos los errores personalizados del sistema.
         print(f"Error controlado: {error}")
 
-        # Comprobar si existe una excepcion original encadenada
+        # Registramos el error en el archivo de eventos.
+        registrar_error(f"Operacion {numero}: {error}")
+
+        # Si existe una causa original, tambien la mostramos.
         if error.__cause__ is not None:
             print(f"Causa original: {error.__cause__}")
-
-            registrar_error_completo(
-                f"Operacion {numero}: Error encadenado"
+            registrar_error(
+                f"Causa original de operacion {numero}: {error.__cause__}"
             )
-        else:
-            registrar_error(f"Operacion {numero}: {error}")
 
-    # Capturar errores relacionados con datos y atributos
     except (ValueError, TypeError, AttributeError) as error:
+
+        # Controlamos errores relacionados con los datos.
         print(f"Error de datos: {error}")
         registrar_error(f"Operacion {numero}: {error}")
 
-    # Capturar cualquier otro error inesperado
     except Exception as error:
+
+        # Capturamos cualquier otro error no previsto.
         print(f"Error inesperado: {error}")
         registrar_error_completo(
             f"Error inesperado en operacion {numero}"
         )
 
-    # Ejecutar cuando no se presentan errores
     else:
+
+        # Este bloque se ejecuta cuando no ocurre ninguna excepcion.
         print("Operacion ejecutada correctamente.")
         registrar_evento(
             f"Operacion {numero} ejecutada correctamente."
         )
 
-    # Ejecutar siempre, ocurra o no un error
     finally:
+
+        # Este bloque siempre se ejecuta al terminar la operacion.
         print("Finalizacion de la operacion.")
         registrar_evento(
             f"Finalizacion de la operacion {numero}."
         )
 
 
-# Funcion principal del programa
+# Funcion principal que ejecuta el sistema integral de gestion.
 def main():
 
-    # Crear el sistema de gestion
+    # Creamos el objeto encargado de administrar el sistema.
     sistema = SistemaGestion()
 
+    # Mostramos el encabezado principal del programa.
     print("=" * 55)
     print(" SISTEMA INTEGRAL DE GESTION - SOFTWARE FJ")
     print("=" * 55)
 
-    # OPERACION 1: Registrar cliente valido
+    # OPERACION 1: Registrar un cliente valido.
+
     cliente1 = None
 
     def operacion1():
@@ -151,7 +160,8 @@ def main():
         operacion1
     )
 
-    # OPERACION 2: Intentar registrar cliente invalido
+    # OPERACION 2: Intentar registrar un cliente con datos incorrectos.
+
     def operacion2():
 
         cliente_invalido = Cliente(
@@ -169,7 +179,8 @@ def main():
         operacion2
     )
 
-    # OPERACION 3: Registrar segundo cliente valido
+    # OPERACION 3: Registrar un segundo cliente valido.
+
     cliente2 = None
 
     def operacion3():
@@ -191,7 +202,8 @@ def main():
         operacion3
     )
 
-    # OPERACION 4: Crear servicio de reserva de sala
+    # OPERACION 4: Crear el servicio de reserva de salas.
+
     sala = None
 
     def operacion4():
@@ -212,7 +224,8 @@ def main():
         operacion4
     )
 
-    # OPERACION 5: Crear servicio de alquiler de equipos
+    # OPERACION 5: Crear el servicio de alquiler de equipos.
+
     equipo = None
 
     def operacion5():
@@ -233,7 +246,8 @@ def main():
         operacion5
     )
 
-    # OPERACION 6: Crear servicio de asesoria especializada
+    # OPERACION 6: Crear el servicio de asesoria especializada.
+
     asesoria = None
 
     def operacion6():
@@ -254,7 +268,8 @@ def main():
         operacion6
     )
 
-    # OPERACION 7: Intentar crear servicio con precio invalido
+    # OPERACION 7: Intentar crear un servicio con precio negativo.
+
     def operacion7():
 
         servicio_invalido = ReservaSala(
@@ -271,7 +286,8 @@ def main():
         operacion7
     )
 
-    # OPERACION 8: Crear y confirmar una reserva
+    # OPERACION 8: Crear y confirmar una reserva.
+
     reserva1 = None
 
     def operacion8():
@@ -295,7 +311,8 @@ def main():
         operacion8
     )
 
-    # OPERACION 9: Procesar reserva con impuesto y descuento
+    # OPERACION 9: Procesar la reserva aplicando impuesto y descuento.
+
     def operacion9():
 
         costo = reserva1.procesar(
@@ -311,7 +328,8 @@ def main():
         operacion9
     )
 
-    # OPERACION 10: Intentar reservar un servicio no disponible
+    # OPERACION 10: Intentar reservar un servicio no disponible.
+
     def operacion10():
 
         equipo.cambiar_disponibilidad(False)
@@ -332,7 +350,8 @@ def main():
         operacion10
     )
 
-    # OPERACION 11: Intentar crear reserva con duracion invalida
+    # OPERACION 11: Intentar crear una reserva con duracion negativa.
+
     def operacion11():
 
         reserva_invalida = Reserva(
@@ -350,7 +369,8 @@ def main():
         operacion11
     )
 
-    # OPERACION 12: Crear y cancelar una reserva
+    # OPERACION 12: Crear y cancelar una reserva.
+
     def operacion12():
 
         reserva3 = Reserva(
@@ -371,30 +391,35 @@ def main():
         operacion12
     )
 
-    # OPERACION 13: Mostrar clientes registrados
+    # OPERACION 13: Consultar los clientes registrados.
+
     ejecutar_operacion(
         13,
         "Consulta de clientes registrados",
         sistema.mostrar_clientes
     )
 
-    # OPERACION 14: Mostrar servicios registrados
+    # OPERACION 14: Consultar los servicios registrados.
+
     ejecutar_operacion(
         14,
         "Consulta de servicios registrados",
         sistema.mostrar_servicios
     )
 
-    # OPERACION 15: Mostrar reservas registradas
+    # OPERACION 15: Consultar las reservas registradas.
+
     ejecutar_operacion(
         15,
         "Consulta de reservas registradas",
         sistema.mostrar_reservas
     )
 
-    # OPERACION 16: Demostrar encadenamiento de excepciones
+    # OPERACION 16: Demostrar el encadenamiento de excepciones.
+
     def operacion16():
 
+        # Creamos una nueva reserva para realizar la prueba.
         reserva4 = Reserva(
             "R005",
             cliente1,
@@ -402,13 +427,14 @@ def main():
             2
         )
 
-        # Confirmar la reserva cuando el servicio esta disponible
+        # Confirmamos la reserva cuando el servicio esta disponible.
         reserva4.confirmar()
 
-        # Cambiar la disponibilidad para provocar el error
+        # Cambiamos la disponibilidad despues de confirmar.
         sala.cambiar_disponibilidad(False)
 
-        # Procesar la reserva y generar la excepcion encadenada
+        # Intentamos procesar la reserva y provocamos el error.
+        # La excepcion original se encadena con ReservaInvalidaError.
         reserva4.procesar()
 
     ejecutar_operacion(
@@ -417,17 +443,17 @@ def main():
         operacion16
     )
 
-    # Mostrar mensaje de finalizacion del programa
+    # Mostramos el mensaje de finalizacion del programa.
     print("\n" + "=" * 55)
     print("PROCESO FINALIZADO")
     print("El sistema continuo funcionando ante los errores.")
     print("Los eventos y errores fueron registrados en eventos.log.")
     print("=" * 55)
 
-    # Registrar la finalizacion general del sistema
+    # Registramos la finalizacion general del sistema.
     registrar_evento("Ejecucion general del sistema finalizada.")
 
 
-# Iniciar el programa
+# Ejecutamos el programa solamente cuando se abre este archivo directamente.
 if __name__ == "__main__":
     main()

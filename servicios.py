@@ -1,22 +1,20 @@
 
-# Importamos las herramientas necesarias para trabajar con clases abstractas.
+# Importamos las herramientas para trabajar con clases abstractas.
 from abc import abstractmethod
 
-# Importamos la clase general de las entidades del sistema.
+# Importamos la clase base y la excepcion de disponibilidad.
 from entidades import Entidad
-
-# Importamos la excepcion para servicios que no estan disponibles.
 from excepciones import ServicioNoDisponibleError
 
 
-# Clase abstracta que representa los servicios de Software FJ.
+# Clase abstracta que representa los servicios ofrecidos por la empresa.
 class Servicio(Entidad):
 
     # Inicializamos los datos generales de cada servicio.
     def __init__(self, identificador, nombre, precio_base):
         super().__init__(identificador)
 
-        # Validamos que el nombre sea texto y no este vacio.
+        # Validamos el nombre del servicio.
         if not isinstance(nombre, str) or not nombre.strip():
             raise ValueError("El nombre del servicio no es valido.")
 
@@ -28,44 +26,46 @@ class Servicio(Entidad):
         ):
             raise ValueError("El precio debe ser mayor que cero.")
 
-        # Guardamos los datos de forma encapsulada.
+        # Guardamos los datos privados del servicio.
         self.__nombre = nombre.strip()
         self.__precio_base = float(precio_base)
         self.__disponible = True
 
-    # Permitimos consultar el nombre del servicio.
+    # Propiedad para consultar el nombre del servicio.
     @property
     def nombre(self):
         return self.__nombre
 
-    # Permitimos consultar el precio base.
+    # Propiedad para consultar el precio base.
     @property
     def precio_base(self):
         return self.__precio_base
 
-    # Permitimos consultar la disponibilidad.
+    # Propiedad para consultar la disponibilidad.
     @property
     def disponible(self):
         return self.__disponible
 
-    # Cambiamos el estado de disponibilidad del servicio.
+    # Metodo para cambiar la disponibilidad del servicio.
     def cambiar_disponibilidad(self, estado):
+
         if not isinstance(estado, bool):
             raise ValueError("La disponibilidad debe ser True o False.")
 
         self.__disponible = estado
 
-    # Comprobamos que el servicio este disponible.
+    # Verificamos que el servicio pueda utilizarse.
     def validar_disponibilidad(self):
+
         if not self.__disponible:
             raise ServicioNoDisponibleError(
                 f"El servicio {self.__nombre} no esta disponible."
             )
 
-    # Validamos los datos generales utilizados en los calculos.
-    def validar_calculo(self, duracion, impuesto, descuento):
-        self.validar_disponibilidad()
+    # Validacion general de los parametros de calculo.
+    def validar_parametros(self, duracion, impuesto, descuento):
 
+        # Comprobamos que la duracion sea numerica y positiva.
         if (
             not isinstance(duracion, (int, float))
             or isinstance(duracion, bool)
@@ -73,13 +73,15 @@ class Servicio(Entidad):
         ):
             raise ValueError("La duracion debe ser mayor que cero.")
 
+        # Verificamos que el impuesto sea un porcentaje valido.
         if (
             not isinstance(impuesto, (int, float))
             or isinstance(impuesto, bool)
-            or impuesto < 0
+            or not 0 <= impuesto <= 100
         ):
-            raise ValueError("El impuesto no puede ser negativo.")
+            raise ValueError("El impuesto debe estar entre 0 y 100.")
 
+        # Verificamos que el descuento sea un valor numerico no negativo.
         if (
             not isinstance(descuento, (int, float))
             or isinstance(descuento, bool)
@@ -87,22 +89,30 @@ class Servicio(Entidad):
         ):
             raise ValueError("El descuento no puede ser negativo.")
 
+        # Calculamos el subtotal para comprobar el descuento.
         subtotal = self.precio_base * duracion
 
         if descuento > subtotal:
             raise ValueError("El descuento no puede superar el subtotal.")
 
-    # Definimos los metodos que deben implementar los servicios especializados.
+    # Validamos la disponibilidad y los parametros del calculo.
+    def validar_calculo(self, duracion, impuesto, descuento):
+        self.validar_disponibilidad()
+        self.validar_parametros(duracion, impuesto, descuento)
+
+    # Metodo abstracto que calcula el costo de cada servicio.
     @abstractmethod
     def calcular_costo(self, duracion, impuesto=0, descuento=0):
         pass
 
+    # Metodo abstracto para describir cada tipo de servicio.
     @abstractmethod
     def describir_servicio(self):
         pass
 
-    # Mostramos la informacion general del servicio.
+    # Metodo que muestra los datos generales del servicio.
     def mostrar_informacion(self):
+
         estado = "Disponible" if self.disponible else "No disponible"
 
         return (
@@ -111,71 +121,77 @@ class Servicio(Entidad):
         )
 
 
-# Clase especializada para las reservas de salas.
+# Clase derivada que representa la reserva de salas.
 class ReservaSala(Servicio):
 
-    # Sobrescribimos la validacion para las reservas de salas.
-    def validar_calculo(self, duracion, impuesto, descuento):
-        super().validar_calculo(duracion, impuesto, descuento)
+    # Sobrescribimos la validacion de parametros para este servicio.
+    def validar_parametros(self, duracion, impuesto, descuento):
+        super().validar_parametros(duracion, impuesto, descuento)
 
         if duracion > 24:
             raise ValueError("La reserva de sala no puede superar 24 horas.")
 
-    # Calculamos el costo de reservar una sala.
+    # Calculamos el costo aplicando el impuesto y el descuento.
     def calcular_costo(self, duracion, impuesto=0, descuento=0):
+
         self.validar_calculo(duracion, impuesto, descuento)
 
         subtotal = self.precio_base * duracion
+        total = subtotal + (subtotal * impuesto / 100) - descuento
 
-        return subtotal + (subtotal * impuesto / 100) - descuento
+        return total
 
     # Describimos el servicio de reserva de salas.
     def describir_servicio(self):
         return "Reserva de salas de reuniones por horas."
 
 
-# Clase especializada para el alquiler de equipos.
+# Clase derivada que representa el alquiler de equipos.
 class AlquilerEquipos(Servicio):
 
-    # Sobrescribimos la validacion para el alquiler de equipos.
-    def validar_calculo(self, duracion, impuesto, descuento):
-        super().validar_calculo(duracion, impuesto, descuento)
+    # Sobrescribimos la validacion de parametros del alquiler.
+    def validar_parametros(self, duracion, impuesto, descuento):
+        super().validar_parametros(duracion, impuesto, descuento)
 
-        if duracion > 168:
-            raise ValueError("El alquiler no puede superar 168 horas.")
+        if duracion > 720:
+            raise ValueError("El alquiler no puede superar 720 horas.")
 
     # Calculamos el costo incluyendo un recargo del 5 por ciento.
     def calcular_costo(self, duracion, impuesto=0, descuento=0):
+
         self.validar_calculo(duracion, impuesto, descuento)
 
         subtotal = self.precio_base * duracion
         recargo = subtotal * 0.05
+        total = subtotal + recargo + (subtotal * impuesto / 100) - descuento
 
-        return subtotal + recargo + (subtotal * impuesto / 100) - descuento
+        return total
 
     # Describimos el servicio de alquiler de equipos.
     def describir_servicio(self):
         return "Alquiler de computadores y equipos tecnologicos."
 
 
-# Clase especializada para las asesorias.
+# Clase derivada que representa las asesorias especializadas.
 class AsesoriaEspecializada(Servicio):
 
-    # Sobrescribimos la validacion para las asesorias.
-    def validar_calculo(self, duracion, impuesto, descuento):
-        super().validar_calculo(duracion, impuesto, descuento)
+    # Sobrescribimos la validacion de parametros de la asesoria.
+    def validar_parametros(self, duracion, impuesto, descuento):
+        super().validar_parametros(duracion, impuesto, descuento)
 
         if duracion > 12:
             raise ValueError("La asesoria no puede superar 12 horas.")
 
     # Calculamos el costo incluyendo un recargo del 10 por ciento.
     def calcular_costo(self, duracion, impuesto=0, descuento=0):
+
         self.validar_calculo(duracion, impuesto, descuento)
 
         subtotal = self.precio_base * duracion
         recargo = subtotal * 0.10
+        total = subtotal + recargo + (subtotal * impuesto / 100) - descuento
 
-        return subtotal + recargo + (subtotal * impuesto / 100) - descuento
+        return total
 
     # Describimos el servicio de asesoria especializada.
     def describir_servicio(self):

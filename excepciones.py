@@ -1,23 +1,29 @@
+
+# Clase general para los errores propios del sistema Software FJ.
 class SoftwareFJError(Exception):
-    """Excepcion general del sistema Software FJ."""
+    """Excepcion general del sistema."""
     pass
 
 
+# Error que se presenta cuando los datos de un cliente son incorrectos.
 class ClienteInvalidoError(SoftwareFJError):
-    """Error cuando los datos de un cliente son incorrectos."""
+    """Error en el registro o validacion de clientes."""
     pass
 
 
+# Error que se presenta cuando un servicio no se encuentra disponible.
 class ServicioNoDisponibleError(SoftwareFJError):
-    """Error cuando un servicio no esta disponible."""
+    """Error relacionado con la disponibilidad de los servicios."""
     pass
 
 
+# Error que se presenta cuando una reserva no cumple las condiciones.
 class ReservaInvalidaError(SoftwareFJError):
-    """Error cuando una reserva no cumple las condiciones."""
+    """Error en la creacion o procesamiento de reservas."""
     pass
 
 
+# Error que se presenta cuando una operacion no esta permitida.
 class OperacionNoPermitidaError(SoftwareFJError):
-    """Error cuando se intenta realizar una operacion no permitida."""
+    """Error por intentar ejecutar una operacion no permitida."""
     pass
